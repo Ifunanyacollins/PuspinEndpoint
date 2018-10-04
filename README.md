@@ -46,14 +46,73 @@ Puspin is a fictional transport company,located in the heart of Ebonyi state,Nig
   fields [ name, depart_time,id,terminalId]
   ```
   {
-  bus(id:"1233489-fihugymkjbhh-37tgyd6eytr6"){
+  bus(id:"<id from db>"){
    name,
    id
    .....
  }
   }
   ```
+  For all terminals
+  fields[name,number,id,location]
+  ```
+  {
+  
+  terminals{
+   name
+   number
+   location
+   ........
+  }
   
   
- 
- 
+  }
+  ```
+  For a single terminal 
+  fields [name,number,id,location]
+  
+  ```
+  {
+  terminal(id:"<id from db>"){
+     name
+    .......
+   }
+  }
+  
+  ```
+  For combine querie,Lets say u want a single terminal and every bus in it
+    ```
+  For a single terminal and every bus in it
+  fields [name,number,id,location]
+  
+  ```
+  {
+  terminal(id:"<id from db>"){
+     name
+    buses{
+     name
+     depart_time
+    }
+   }
+  }
+  
+  ```
+  
+  
+   For a single Bus and its terminal
+  fields [ name, depart_time,id,terminalId]
+  ```
+  {
+  bus(id:"<id from db>"){
+   name,
+   id
+  terminal{
+      name
+      depart_time
+   }
+ }
+  }
+ ```
+ **Note** :
+ I hope you enjoyed the query,I will definetly work on the client app for this project.
+:smile:
