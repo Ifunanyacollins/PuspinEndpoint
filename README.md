@@ -1,4 +1,4 @@
-# travelEndpoint
+# PuspinEndpoint
 
 Puspin is a fictional transport company,located in the heart of Ebonyi state,Nigeria.
 
